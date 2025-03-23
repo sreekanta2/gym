@@ -4,7 +4,7 @@ import ThemeButton from "@/components/theme-button";
 import { Button } from "@/components/ui/button";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { AnimatePresence, motion } from "framer-motion"; // Import Framer Motion
-import { ChevronDown, LogIn, LogInIcon, Menu } from "lucide-react";
+import { ChevronDown, LogIn, Menu } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -136,7 +136,7 @@ const Header = () => {
       className={
         scroll
           ? "bg-card/50 backdrop-blur-lg shadow-xl z-30 dark:bg-card/70 fixed top-0 left-0 w-full py-3"
-          : "z-30 fixed top-0 left-0 w-full py-3  text-default-700 bg-card/10 backdrop-blur-sm "
+          : "z-30 fixed top-0 left-0 w-full py-3   bg-card/10 backdrop-blur-sm "
       }
     >
       <nav className="container flex justify-between">
@@ -145,15 +145,6 @@ const Header = () => {
           <span className="text-primary-500 font-medium text-xl">evora</span>
         </Link>
         <NavMenu />
-        <div className="flex items-center gap-6">
-          <ThemeButton />
-          <Button asChild size="sm">
-            <Link href="#" className="text-sm font-semibold">
-              <LogInIcon className="w-4 h-4 me-1.5" />
-              Login
-            </Link>
-          </Button>
-        </div>
       </nav>
     </div>
   );

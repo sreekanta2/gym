@@ -4,7 +4,7 @@ import ThemeButton from "@/components/theme-button";
 import { Button } from "@/components/ui/button";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { AnimatePresence, motion } from "framer-motion"; // Import Framer Motion
-import { ChevronDown, LogIn, LogInIcon, Menu } from "lucide-react";
+import { ChevronDown, LogIn, Menu } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { menus } from "../../../config/data";
@@ -69,7 +69,7 @@ const Header = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className="absolute bg-card/70 top-12 backdrop-blur-lg  rounded-sm rounded-t-none p-4  w-full  "
+                  className="absolute  bg-muted  top-12  rounded-sm rounded-t-none p-4  w-full  "
                 >
                   <ul className="space-y-2 ">
                     {menus.map((menu, index) => (
@@ -134,8 +134,8 @@ const Header = () => {
     <div
       className={
         scroll
-          ? "bg-card/50 backdrop-blur-lg shadow-xl z-30 dark:bg-card/70 fixed top-0 left-0 w-full py-3"
-          : "z-30 fixed top-0 left-0 w-full py-3 text-white"
+          ? "bg-card/50 backdrop-blur-lg shadow-xl z-30 dark:bg-card/70 fixed top-0 left-0 w-full py-3 text-default-700"
+          : "z-30 fixed top-0 left-0 w-full py-3 text-white "
       }
     >
       <nav className="container flex justify-between">
@@ -144,15 +144,6 @@ const Header = () => {
           <span className="text-primary-500 font-medium text-xl">evora</span>
         </Link>
         <NavMenu />
-        <div className="flex items-center gap-6">
-          <ThemeButton />
-          <Button asChild size="sm">
-            <Link href="#" className="text-sm font-semibold">
-              <LogInIcon className="w-4 h-4 me-1.5" />
-              Login
-            </Link>
-          </Button>
-        </div>
       </nav>
     </div>
   );

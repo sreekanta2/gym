@@ -100,6 +100,9 @@ const config = {
           foreground: "hsl(var(--card-foreground) / <alpha-value>)",
         },
       },
+      gridTemplateColumns: {
+        gallery: "repeat(auto-fit, minmax(250px, 1fr))",
+      },
       boxShadow: {
         sm: "0px 1px 2px 0px rgba(15, 22, 36, 0.06), 0px 1px 3px 0px rgba(15, 22, 36, 0.10)",
       },

@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "DServices ",
+  name: "Dgym ",
   description: null,
   theme: "violet",
   layout: "vertical",

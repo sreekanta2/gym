@@ -50,52 +50,20 @@ export const demoMenus = [
 
 export const menus = [
   {
-    title: "Home",
-    href: "/",
-  },
-  {
-    title: "About Us",
-    href: "#technology",
-    child: [
-      {
-        title: "About Us",
-        href: "/about-us",
-      },
-      {
-        title: "About Me",
-        href: "/about-me",
-      },
-    ],
-  },
-
-  {
     title: "Services",
-    child: [
-      {
-        title: "Balance body mind",
-        href: "/",
-      },
-      {
-        title: "Nutrition Plan",
-        href: "/",
-      },
-      {
-        title: "Fitness & Performance",
-        href: "",
-      },
-      {
-        title: "Routein Programe",
-        href: " ",
-      },
-      {
-        title: "Weight Loos",
-        href: " ",
-      },
-    ],
+    href: "/services",
+  },
+  {
+    title: "Gallery",
+    href: "/gallery",
   },
   {
     title: "Events",
-    href: "/",
+    href: "/events",
+  },
+  {
+    title: "Blogs",
+    href: "/blogs",
   },
   {
     title: "Pages",
@@ -130,6 +98,21 @@ export const menus = [
     title: "Shop",
     href: "/",
   },
+  {
+    title: "About Us",
+    href: "#technology",
+    child: [
+      {
+        title: "About Us",
+        href: "/about-us",
+      },
+      {
+        title: "About Me",
+        href: "/about-me",
+      },
+    ],
+  },
+
   {
     title: "Contact",
     href: "/",

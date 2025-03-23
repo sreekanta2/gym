@@ -5,12 +5,12 @@ export const blogsData = [
     content:
       "Artificial Intelligence is making significant strides in the healthcare industry, improving diagnostics, treatment plans, and patient outcomes. Experts believe AI-powered solutions will play a crucial role in the future of medicine.",
     publishedAt: "2025-03-10T10:00:00Z",
-    image: "/images/latest-news-2.jpg",
+    image: "/images/blog/blog-1.jpg",
     author: {
       id: 101,
       name: "John Doe",
       email: "johndoe@example.com",
-      image: "/images/doctors/doctor3.webp",
+      image: "/images/avatar/avatar-1.jpg",
     },
     comments: [
       {
@@ -132,7 +132,7 @@ export const blogsData = [
     content:
       "Telemedicine has gained immense popularity, providing accessible healthcare to remote areas. It reduces the burden on hospitals and allows patients to consult doctors from their homes.",
     publishedAt: "2025-03-09T15:45:00Z",
-    image: "/images/latest-news-1.jpg",
+    image: "/images/blog/blog-2.jpg",
     author: {
       id: 102,
       name: "Sarah Lee",
@@ -155,7 +155,7 @@ export const blogsData = [
     content:
       "Wearable devices like smartwatches and fitness trackers are helping people monitor their health in real time. These devices can detect irregular heartbeats and other vital signs.",
     publishedAt: "2025-03-08T11:00:00Z",
-    image: "/images/blogs/blog-03.jpg",
+    image: "/images/blog/blog-3.jpg",
     author: {
       id: 103,
       name: "Michael Johnson",
@@ -178,7 +178,7 @@ export const blogsData = [
     content:
       "With rising stress levels worldwide, mental health awareness is more critical than ever. New therapies and online counseling platforms are making mental healthcare accessible.",
     publishedAt: "2025-03-07T18:00:00Z",
-    image: "/images/blogs/blog-04.jpg",
+    image: "/images/blog/blog-4.jpg",
     author: {
       id: 104,
       name: "Anna Cooper",
@@ -193,7 +193,7 @@ export const blogsData = [
     content:
       "Personalized medicine tailors treatment plans based on an individual's genetic makeup. It has the potential to improve the effectiveness of treatments while reducing side effects.",
     publishedAt: "2025-03-06T14:30:00Z",
-    image: "/images/blogs/blog-05.jpg",
+    image: "/images/blog/blog-5.jpg",
     author: {
       id: 105,
       name: "Christopher Miller",
@@ -208,7 +208,7 @@ export const blogsData = [
     content:
       "A well-balanced diet can significantly reduce the risk of chronic diseases such as diabetes, heart disease, and obesity. Experts suggest focusing on whole foods and reducing processed food intake.",
     publishedAt: "2025-03-05T12:00:00Z",
-    image: "/images/blogs/blog-06.jpg",
+    image: "/images/blog/blog-6.jpg",
     author: {
       id: 106,
       name: "Emily Clark",
@@ -223,7 +223,7 @@ export const blogsData = [
     content:
       "Virtual reality (VR) is being used in therapy for PTSD, anxiety, and rehabilitation. It provides immersive experiences that aid in faster recovery.",
     publishedAt: "2025-03-04T09:45:00Z",
-    image: "/images/blogs/blog-07.jpg",
+    image: "/images/blog/blog-7.jpg",
     author: {
       id: 107,
       name: "Nathan Brooks",
@@ -238,7 +238,7 @@ export const blogsData = [
     content:
       "CRISPR and other gene-editing technologies are advancing rapidly. While they hold promise for curing genetic diseases, ethical concerns remain.",
     publishedAt: "2025-03-03T17:30:00Z",
-    image: "/images/blogs/blog-08.jpg",
+    image: "/images/blog/blog-8.jpg",
     author: {
       id: 108,
       name: "Olivia Turner",
@@ -253,7 +253,7 @@ export const blogsData = [
     content:
       "New treatments, including immunotherapy and targeted therapies, are offering hope to cancer patients. Scientists are working on developing more personalized approaches.",
     publishedAt: "2025-03-02T16:15:00Z",
-    image: "/images/blogs/blog-09.jpg",
+    image: "/images/blog/blog-9.jpg",
     author: {
       id: 109,
       name: "Robert Wilson",
@@ -268,7 +268,7 @@ export const blogsData = [
     content:
       "Lack of sleep can lead to numerous health issues, including weakened immunity and increased risk of chronic diseases. Experts emphasize the need for 7-9 hours of quality sleep.",
     publishedAt: "2025-03-01T08:00:00Z",
-    image: "/images/blogs/blog-10.jpg",
+    image: "/images/blog/blog-1.jpg",
     author: {
       id: 110,
       name: "Sophia Martinez",
@@ -283,7 +283,7 @@ export const blogsData = [
     content:
       "Lack of sleep can lead to numerous health issues, including weakened immunity and increased risk of chronic diseases. Experts emphasize the need for 7-9 hours of quality sleep.",
     publishedAt: "2025-03-01T08:00:00Z",
-    image: "/images/blogs/blog-10.jpg",
+    image: "/images/blog/blog-10.jpg",
     author: {
       id: 110,
       name: "Sophia Martinez",
@@ -298,7 +298,7 @@ export const blogsData = [
     content:
       "Lack of sleep can lead to numerous health issues, including weakened immunity and increased risk of chronic diseases. Experts emphasize the need for 7-9 hours of quality sleep.",
     publishedAt: "2025-03-01T08:00:00Z",
-    image: "/images/blogs/blog-10.jpg",
+    image: "/images/blog/blog-2.jpg",
     author: {
       id: 110,
       name: "Sophia Martinez",
@@ -313,7 +313,7 @@ export const blogsData = [
     content:
       "Lack of sleep can lead to numerous health issues, including weakened immunity and increased risk of chronic diseases. Experts emphasize the need for 7-9 hours of quality sleep.",
     publishedAt: "2025-03-01T08:00:00Z",
-    image: "/images/blogs/blog-10.jpg",
+    image: "/images/blog/blog-3.jpg",
     author: {
       id: 110,
       name: "Sophia Martinez",
@@ -328,7 +328,7 @@ export const blogsData = [
     content:
       "Robotic-assisted surgeries are becoming more precise, reducing recovery times and improving surgical outcomes for patients.",
     publishedAt: "2025-02-28T10:00:00Z",
-    image: "/images/blogs/blog-11.jpg",
+    image: "/images/blog/blog-4.jpg",
     author: {
       id: 111,
       name: "Daniel Scott",
@@ -343,7 +343,7 @@ export const blogsData = [
     content:
       "Big Data is revolutionizing healthcare by improving patient diagnosis, treatment plans, and predicting disease outbreaks.",
     publishedAt: "2025-02-27T15:30:00Z",
-    image: "/images/blogs/blog-12.jpg",
+    image: "/images/blog/blog-4.jpg",
     author: {
       id: 112,
       name: "Jessica Rivera",
@@ -358,7 +358,7 @@ export const blogsData = [
     content:
       "3D printing is being used to create custom prosthetics, implants, and even organ tissues, pushing the boundaries of medical technology.",
     publishedAt: "2025-02-26T09:45:00Z",
-    image: "/images/blogs/blog-13.jpg",
+    image: "/images/blog/blog-5.jpg",
     author: {
       id: 113,
       name: "Ryan Cooper",
@@ -373,7 +373,7 @@ export const blogsData = [
     content:
       "A plant-based diet is linked to lower risks of heart disease, diabetes, and obesity. More people are adopting this lifestyle for better health.",
     publishedAt: "2025-02-25T12:00:00Z",
-    image: "/images/blogs/blog-14.jpg",
+    image: "/images/blog/blog-6.jpg",
     author: {
       id: 114,
       name: "Rachel Adams",
@@ -388,7 +388,7 @@ export const blogsData = [
     content:
       "Research shows that gut bacteria play a crucial role in digestion, immunity, and even mental health.",
     publishedAt: "2025-02-24T14:20:00Z",
-    image: "/images/blogs/blog-15.jpg",
+    image: "/images/blog/blog-7.jpg",
     author: {
       id: 115,
       name: "Ethan Morgan",
@@ -403,7 +403,7 @@ export const blogsData = [
     content:
       "Rising temperatures and pollution levels are increasing the risk of respiratory diseases, heat strokes, and vector-borne illnesses.",
     publishedAt: "2025-02-23T11:30:00Z",
-    image: "/images/blogs/blog-16.jpg",
+    image: "/images/blog/blog-8.jpg",
     author: {
       id: 116,
       name: "Olivia Carter",
@@ -418,7 +418,7 @@ export const blogsData = [
     content:
       "Studies suggest that mindfulness meditation reduces stress, lowers blood pressure, and improves overall well-being.",
     publishedAt: "2025-02-22T16:15:00Z",
-    image: "/images/blogs/blog-17.jpg",
+    image: "/images/blog/blog-9.jpg",
     author: {
       id: 117,
       name: "Mason Lee",
@@ -433,7 +433,7 @@ export const blogsData = [
     content:
       "New breakthroughs in drug research and early detection methods are bringing hope to Alzheimer’s patients and their families.",
     publishedAt: "2025-02-21T08:45:00Z",
-    image: "/images/blogs/blog-18.jpg",
+    image: "/images/blog/blog-8.jpg",
     author: {
       id: 118,
       name: "Sophia Bennett",
@@ -448,7 +448,7 @@ export const blogsData = [
     content:
       "Drinking enough water helps maintain energy levels, improve brain function, and prevent various health issues.",
     publishedAt: "2025-02-20T12:30:00Z",
-    image: "/images/blogs/blog-19.jpg",
+    image: "/images/blog/blog-1.jpg",
     author: {
       id: 119,
       name: "Benjamin Hall",
@@ -463,7 +463,7 @@ export const blogsData = [
     content:
       "Scientists are developing artificial hearts, kidneys, and other organs to address the shortage of transplant donors.",
     publishedAt: "2025-02-19T10:00:00Z",
-    image: "/images/blogs/blog-20.jpg",
+    image: "/images/blog/blog-2.jpg",
     author: {
       id: 120,
       name: "Isabella Reed",
