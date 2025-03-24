@@ -3,19 +3,22 @@ import { SiteLogo } from "@/components/svg";
 import ThemeButton from "@/components/theme-button";
 import { Button } from "@/components/ui/button";
 import { useMediaQuery } from "@/hooks/use-media-query";
-import { AnimatePresence, motion } from "framer-motion"; // Import Framer Motion
+import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, LogIn, Menu } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation"; // Add this import
 import { useEffect, useState } from "react";
 
 import { menus } from "@/config/data";
+import { cn } from "@/lib/utils";
 import NavMenu from "./nav-menu";
 
 const Header = () => {
   const [scroll, setScroll] = useState<boolean>(false);
   const isDesktop = useMediaQuery("(min-width: 1024px)");
   const [open, setOpen] = useState<boolean>(false);
-  const [activeMenu, setActiveMenu] = useState<string | null>(null); // Track active menu
+  const [activeMenu, setActiveMenu] = useState<string | null>(null);
+  const pathname = usePathname(); // Get current route path
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -23,7 +26,16 @@ const Header = () => {
     });
   }, []);
 
-  // Toggle child menu visibility
+  // Check if a menu item is active
+  const isActive = (href: string) => {
+    return pathname === href || (href !== "/" && pathname.startsWith(href));
+  };
+
+  // Check if any child menu is active
+  const hasActiveChild = (children: any[]) => {
+    return children.some((child) => isActive(child.href));
+  };
+
   const toggleMenu = (title: string) => {
     setActiveMenu(activeMenu === title ? null : title);
   };
@@ -34,11 +46,11 @@ const Header = () => {
         <div
           className={
             scroll
-              ? "bg-card/50 dark:bg-card/70 backdrop-blur-lg z-50     shadow-sm fixed top-0 left-0 w-full h-fit py-3"
-              : "fixed top-0 left-0 w-full py-3  z-50 "
+              ? "bg-card/50 dark:bg-card/70 backdrop-blur-lg z-50 shadow-sm fixed top-0 left-0 w-full h-fit py-3"
+              : "fixed top-0 left-0 w-full py-3 z-50"
           }
         >
-          <nav className=" flex justify-between relative z-50 h-full mx-4">
+          <nav className="flex justify-between relative z-50 h-full mx-4">
             {/* Logo Section */}
             <Link href="/" className="flex items-center gap-1">
               <SiteLogo className="h-8 w-8 text-primary" />
@@ -70,21 +82,28 @@ const Header = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className="absolute bg-card/70 top-12 backdrop-blur-lg  rounded-sm rounded-t-none p-4  w-full  "
+                  className="absolute bg-card/70 top-12 backdrop-blur-lg rounded-sm rounded-t-none p-4 w-full"
                 >
-                  <ul className="space-y-2 ">
+                  <ul className="space-y-2">
                     {menus.map((menu, index) => (
                       <li key={`menu-${index}`} className="relative">
                         {/* Parent Menu Item */}
                         <div
-                          className="flex items-center justify-between py-2 text-sm hover:text-primary cursor-pointer"
-                          onClick={() => toggleMenu(menu.title)} // Toggle on click
+                          className={cn(
+                            "flex items-center justify-between py-2 text-sm hover:text-primary cursor-pointer",
+                            {
+                              "text-primary":
+                                (!menu.child && isActive(menu.href)) ||
+                                (menu.child && hasActiveChild(menu.child)),
+                            }
+                          )}
+                          onClick={() => toggleMenu(menu.title)}
                         >
-                          <span>{menu.title}</span>
+                          <Link href={menu.href}>{menu.title}</Link>
                           {/* Dropdown Icon (Chevron) for Parent Items with Children */}
                           {menu.child && menu.child.length > 0 && (
                             <ChevronDown
-                              className={`h-4 w-4 transform transition-transform duration-200 ,  ${
+                              className={`h-4 w-4 transform transition-transform duration-200 ${
                                 activeMenu === menu.title ? "rotate-180" : ""
                               }`}
                             />
@@ -103,13 +122,19 @@ const Header = () => {
                                   duration: 0.3,
                                   ease: "easeInOut",
                                 }}
-                                className=" mt-2 space-y-2 border-l border-gray-200 overflow-hidden"
+                                className="mt-2 space-y-2 border-l border-gray-200 overflow-hidden"
                               >
                                 {menu.child.map((child, childIndex) => (
                                   <li key={`child-${childIndex}`}>
                                     <Link
                                       href={child.href}
-                                      className="block px-4 py-2 text-sm hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-700"
+                                      className={cn(
+                                        "block px-4 py-2 text-sm hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-700",
+                                        {
+                                          "text-primary": isActive(child.href),
+                                        }
+                                      )}
+                                      onClick={() => setOpen(false)}
                                     >
                                       {child.title}
                                     </Link>
@@ -135,8 +160,8 @@ const Header = () => {
     <div
       className={
         scroll
-          ? "bg-card/50 backdrop-blur-lg shadow-xl z-30 dark:bg-card/70 fixed top-0 left-0 w-full py-3"
-          : "z-30 fixed top-0 left-0 w-full py-3   bg-card/10 backdrop-blur-sm "
+          ? "bg-card/50 backdrop-blur-lg shadow-xl text-white z-30 dark:bg-card/70 fixed top-0 left-0 w-full py-3"
+          : "z-30 fixed top-0 left-0 w-full py-3 text-white bg-card/10 backdrop-blur-sm"
       }
     >
       <nav className="container flex justify-between">

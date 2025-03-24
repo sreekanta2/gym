@@ -47,7 +47,7 @@ export default function Page() {
                     category === "All" ? true : image.category === category
                   ) // Show all images if "All" is selected
                   .map((image) => (
-                    <ImgContainer key={image.id} photo={image} />
+                    <ImgContainer key={image.id} photo={image} sizes={250} />
                   ))}
               </div>
             </TabsContent>

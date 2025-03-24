@@ -3,14 +3,22 @@ import { cn } from "@/lib/utils";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import { ChevronDown, LogInIcon } from "lucide-react";
 import Link from "next/link";
+
+import { usePathname } from "next/navigation";
 import React from "react";
 import ThemeButton from "../theme-button";
 import { Button } from "../ui/button";
 
 export default function NavMenu() {
+  const pathname = usePathname();
   const [offset, setOffset] = React.useState<number | null>(null);
   const [list, setList] = React.useState<HTMLUListElement | null | undefined>();
   const [value, setValue] = React.useState<string | null>();
+
+  // Check if a menu item is active
+  const isActive = (href: string) => {
+    return pathname === href || (href !== "/" && pathname.startsWith(href));
+  };
 
   const onNodeUpdate = (trigger: any, itemValue: any) => {
     if (trigger && list && value === itemValue) {
@@ -46,7 +54,16 @@ export default function NavMenu() {
                   asChild
                   className="flex items-center"
                 >
-                  <div className="flex items-center py-4 cursor-pointer group data-[state=open]:text-primary">
+                  <div
+                    className={cn(
+                      "flex items-center py-4 cursor-pointer group data-[state=open]:text-primary",
+                      {
+                        "text-primary": item.child.some((child: any) =>
+                          isActive(child.href)
+                        ),
+                      }
+                    )}
+                  >
                     <span className="text-base font-medium">{item.title}</span>
                     <ChevronDown
                       className="relative top-[1px] ml-1 h-4 w-4 transition duration-200 group-data-[state=open]:rotate-180"
@@ -63,7 +80,9 @@ export default function NavMenu() {
                     <div className="min-w-[200px] p-4" key={`item-${index}`}>
                       {item.child?.map((childItem: any, index: number) => (
                         <ListItem
-                          className="text-base font-medium  "
+                          className={cn("text-base font-medium", {
+                            "text-primary": isActive(childItem.href),
+                          })}
                           key={`child-${index}`}
                           title={childItem.title}
                           href={childItem.href}
@@ -77,10 +96,16 @@ export default function NavMenu() {
               </NavigationMenu.Item>
             ) : (
               <NavigationMenu.Item key={`item-${index}`}>
-                {/* Use Next.js Link for client-side navigation */}
                 <Link href={item.href} passHref legacyBehavior>
                   <NavigationMenu.Link asChild>
-                    <div className="flex items-center px-2 py-4 cursor-pointer group data-[state=open]:text-primary">
+                    <div
+                      className={cn(
+                        "flex items-center px-2 py-4 cursor-pointer group data-[state=open]:text-primary",
+                        {
+                          "text-primary": isActive(item.href),
+                        }
+                      )}
+                    >
                       <span className="text-base font-medium hover:text-primary">
                         {item.title}
                       </span>

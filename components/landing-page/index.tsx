@@ -2,12 +2,12 @@
 import LayoutLoader from "@/components/layout-loader";
 import { useMounted } from "@/hooks/use-mounted";
 import Footer from "./footer";
-import Header from "./header";
 
 import AboutUs from "./about-us";
 import Blogs from "./blogs/blogs";
 import { CarouselDemo } from "./carosul";
 
+import Header from "../header";
 import CounterPage from "./counter";
 import Faq from "./faq";
 import Join from "./join-us";
