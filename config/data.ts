@@ -66,38 +66,10 @@ export const menus = [
     href: "/blogs",
   },
   {
-    title: "Pages",
-    child: [
-      {
-        title: "Documentation",
-        href: "/docs/introduction",
-      },
-      {
-        title: "Changelog",
-        href: "/docs/update-log",
-      },
-      {
-        title: "Github Access",
-        href: "https://codeshaperbd.freshdesk.com/support/login",
-      },
-      {
-        title: "Report a bug",
-        href: "https://codeshaperbd.freshdesk.com/support/login",
-      },
-      {
-        title: "Support",
-        href: "https://codeshaperbd.freshdesk.com/support/login",
-      },
-      {
-        title: "Hire Us",
-        href: "https://codeshaper.net/",
-      },
-    ],
+    title: "Shops",
+    href: "/products",
   },
-  {
-    title: "Shop",
-    href: "/",
-  },
+
   {
     title: "About Us",
     href: "#technology",
@@ -115,7 +87,7 @@ export const menus = [
 
   {
     title: "Contact",
-    href: "/",
+    href: "/contact",
   },
 ];
 export type Menu = (typeof menus)[number];

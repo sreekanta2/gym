@@ -3,25 +3,24 @@
 import { CountUp } from "countup.js";
 import { Check } from "lucide-react";
 import { useEffect, useRef } from "react";
-import { FaCar, FaTools, FaUsersCog } from "react-icons/fa";
 
 const counters = [
   { id: 1, icon: <Check size={50} />, label: "Years of Experience", count: 15 },
   {
     id: 2,
-    icon: <FaTools size={40} />,
+
     label: "Years of Health Coaching Experience",
     count: 20,
   },
   {
     id: 3,
-    icon: <FaUsersCog size={40} />,
+
     label: "Contest attended aboutFitness",
     count: 25,
   },
   {
     id: 4,
-    icon: <FaCar size={40} />,
+
     label: "CHappy Customer with my exercise plans",
     count: 450,
   },
