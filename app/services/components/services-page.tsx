@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaCar, FaCog, FaOilCan, FaTools } from "react-icons/fa";
 
 import serviceImage2 from "@/public/images/nutrition-2.jpg";
 import serviceImage3 from "@/public/images/nutrition-3.jpg";
@@ -19,11 +18,13 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import bestImage from "@/public/images/best-fitness-2.jpg";
 
+// 7&Lt@swv_qm3aK3
+// ra#kDYgC.ibL(9u
 const services = [
   {
     id: "diagnostic-test",
     title: "Balance Body Mind",
-    icon: <FaCar size={30} />,
+
     images: [
       {
         src: serviceImage1,
@@ -42,7 +43,7 @@ const services = [
   {
     id: "engine-servicing",
     title: "Nutrition Plan",
-    icon: <FaCog size={30} />,
+
     images: [
       {
         src: serviceImage3,
@@ -65,7 +66,7 @@ const services = [
   {
     id: "tires-replacement",
     title: "Fitness & Performance",
-    icon: <FaTools size={30} />,
+
     images: [
       {
         src: serviceImage1,
@@ -84,7 +85,7 @@ const services = [
   {
     id: "oil-changing",
     title: "Routein Program",
-    icon: <FaOilCan size={30} />,
+
     images: [
       {
         src: serviceImage3,
@@ -107,7 +108,7 @@ const services = [
   {
     id: "oil-changing",
     title: "Weight Loss Program",
-    icon: <FaOilCan size={30} />,
+
     images: [
       {
         src: serviceImage1,
@@ -130,7 +131,7 @@ const services = [
   {
     id: "oil-changing",
     title: "Cardio Exercise",
-    icon: <FaOilCan size={30} />,
+
     images: [
       {
         src: serviceImage4,
@@ -174,7 +175,6 @@ export default function ServicesTabs() {
               value={service.title}
               className="w-full py-4 flex  items-center justify-start gap-4 text-primary transition-all duration-300 data-[state=active]:bg-primary data-[state=active]:"
             >
-              {service.icon}
               <span className="  md:text-xl font-medium">{service.title}</span>
             </TabsTrigger>
           ))}
