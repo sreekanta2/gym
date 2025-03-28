@@ -1,5 +1,6 @@
 import React from "react";
-import { FiEdit, FiPlus, FiTrash2 } from "react-icons/fi";
+
+import { Edit, Plus, Trash2 } from "lucide-react";
 import { ClassItem, DAYS_OF_WEEK, TimeSlot } from "../types";
 
 interface ScheduleTableProps {
@@ -130,14 +131,14 @@ const ScheduleTable: React.FC<ScheduleTableProps> = ({
                       className="p-1 text-gray-600 hover:text-blue-600"
                       title="Edit time slot"
                     >
-                      <FiEdit size={16} />
+                      <Edit size={16} />
                     </button>
                     <button
                       onClick={() => handleDeleteTimeSlot(slot.id)}
                       className="p-1 text-gray-600 hover:text-red-600"
                       title="Delete time slot"
                     >
-                      <FiTrash2 size={16} />
+                      <Trash2 size={16} />
                     </button>
                   </div>
                 </td>
@@ -169,7 +170,7 @@ const ScheduleTable: React.FC<ScheduleTableProps> = ({
                             className="p-1 text-gray-700 hover:text-blue-600"
                             title="Edit class"
                           >
-                            <FiEdit size={14} />
+                            <Edit size={14} />
                           </button>
                           <button
                             onClick={(e) => {
@@ -179,7 +180,7 @@ const ScheduleTable: React.FC<ScheduleTableProps> = ({
                             className="p-1 text-gray-700 hover:text-red-600"
                             title="Delete class"
                           >
-                            <FiTrash2 size={14} />
+                            <Trash2 size={14} />
                           </button>
                         </div>
                       </div>
@@ -188,7 +189,7 @@ const ScheduleTable: React.FC<ScheduleTableProps> = ({
                         onClick={() => handleAddClass(slotIndex, dayIndex)}
                         className="w-full h-full flex items-center justify-center text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded border border-dashed border-gray-300"
                       >
-                        <FiPlus size={18} />
+                        <Plus size={18} />
                       </button>
                     )}
                   </td>
@@ -201,14 +202,14 @@ const ScheduleTable: React.FC<ScheduleTableProps> = ({
                       className="p-1 text-gray-600 hover:text-blue-600"
                       title="Edit time slot"
                     >
-                      <FiEdit size={16} />
+                      <Edit size={16} />
                     </button>
                     <button
                       onClick={() => handleDeleteTimeSlot(slot.id)}
                       className="p-1 text-gray-600 hover:text-red-600"
                       title="Delete time slot"
                     >
-                      <FiTrash2 size={16} />
+                      <Trash2 size={16} />
                     </button>
                   </div>
                 </td>

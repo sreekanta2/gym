@@ -1,5 +1,5 @@
+import { Save, X } from "lucide-react";
 import React from "react";
-import { FiSave, FiX } from "react-icons/fi";
 
 interface TimeSlotModalProps {
   isOpen: boolean;
@@ -46,7 +46,7 @@ const TimeSlotModal: React.FC<TimeSlotModalProps> = ({
             onClick={onClose}
             className="text-gray-500 hover:text-gray-700"
           >
-            <FiX size={24} />
+            <X size={24} />
           </button>
         </div>
 
@@ -91,7 +91,7 @@ const TimeSlotModal: React.FC<TimeSlotModalProps> = ({
             onClick={onSave}
             className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 flex items-center gap-2"
           >
-            <FiSave size={18} />
+            <Save size={18} />
             {currentTimeSlot.isNew ? "Add Slot" : "Save Changes"}
           </button>
         </div>
