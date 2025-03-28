@@ -1,5 +1,6 @@
 import React from "react";
-import { FiSave, FiX } from "react-icons/fi";
+
+import { X } from "lucide-react";
 import { CLASS_TYPES, ClassItem } from "../types";
 
 interface ClassModalProps {
@@ -55,7 +56,7 @@ const ClassModal: React.FC<ClassModalProps> = ({
             onClick={onClose}
             className="text-gray-500 hover:text-gray-700"
           >
-            <FiX size={24} />
+            <X size={24} />
           </button>
         </div>
 
@@ -137,7 +138,6 @@ const ClassModal: React.FC<ClassModalProps> = ({
             onClick={onSave}
             className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 flex items-center gap-2"
           >
-            <FiSave size={18} />
             Save Class
           </button>
         </div>
