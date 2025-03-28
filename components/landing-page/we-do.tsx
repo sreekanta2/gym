@@ -102,7 +102,7 @@ const WhatWeDo = () => {
       <div className="  bg-background  ">
         <div className="space-y-3 ">
           <h1 className=" text-xl lg:text-2xl font-medium text-primary">
-            What We Do
+            What I Do
           </h1>
           <p className="text-base  text-default-600">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint enim

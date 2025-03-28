@@ -7,12 +7,12 @@ import AboutUs from "./about-us";
 import Blogs from "./blogs/blogs";
 import { CarouselDemo } from "./carosul";
 
-import Header from "../header";
+import TrainingSchedule from "../schedule";
 import CounterPage from "./counter";
 import Faq from "./faq";
+import Header from "./header";
 import Join from "./join-us";
 import OfferdCourse from "./offerd-course";
-import PricingPlan from "./pricing-plan";
 import Testimonial from "./testimonial";
 import WhatWeDo from "./we-do";
 
@@ -25,9 +25,11 @@ const LandingPageView = () => {
     <div className="bg-background">
       <Header />
       <CarouselDemo />
+
       <Join />
       <WhatWeDo />
       <AboutUs />
+      <TrainingSchedule />
       <CounterPage />
       <OfferdCourse />
       <Testimonial />
@@ -35,7 +37,7 @@ const LandingPageView = () => {
       <Faq />
       {/* <CustomProject /> */}
       {/* <Contact /> */}
-      <PricingPlan />
+      {/* <PricingPlan /> */}
       <Footer />
     </div>
   );

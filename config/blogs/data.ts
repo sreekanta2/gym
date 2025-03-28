@@ -6,6 +6,7 @@ export const blogsData = [
       "Artificial Intelligence is making significant strides in the healthcare industry, improving diagnostics, treatment plans, and patient outcomes. Experts believe AI-powered solutions will play a crucial role in the future of medicine.",
     publishedAt: "2025-03-10T10:00:00Z",
     image: "/images/blog/blog-1.jpg",
+    videoUrl: "https://www.youtube.com/watch?v=dEnaGPapL9o",
     author: {
       id: 101,
       name: "John Doe",

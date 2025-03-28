@@ -1,6 +1,5 @@
 "use client";
 import { SiteLogo } from "@/components/svg";
-import { Button } from "@/components/ui/button";
 import footerImage from "@/public/images/landing-page/footer.png";
 import Link from "next/link";
 
@@ -49,16 +48,14 @@ const Footer = () => {
             className="inline-flex items-center gap-4 text-primary-foreground"
           >
             <SiteLogo className="w-[50px] h-[52px]" />
-            <span className="text-3xl font-semibold">Care</span>
+            <span className="text-3xl font-semibold">Evora</span>
           </Link>
           <p className="text-base leading-7 text-default-200 dark:text-default-600 text-center mt-3">
-            Care is a developer-friendly, ready-to-use admin template designed
-            for building attractive, scalable, and high-performing web
-            applications, powered by the cutting-edge technologies of Next.js
-            and Tailwind CSS.
+            Care is a premium Next.js & Tailwind CSS template designed for
+            developers who demand both beauty and performance.
           </p>
           <div className="mt-9 flex justify-center flex-wrap gap-4">
-            <Button
+            {/* <Button
               asChild
               variant="outline"
               className="rounded text-primary-foreground border-primary"
@@ -72,7 +69,7 @@ const Footer = () => {
               className="rounded text-primary-foreground border-primary"
             >
               <Link href="#">Buy Now</Link>
-            </Button>
+            </Button> */}
           </div>
           {/* <div className="mt-8 flex items-center justify-center flex-wrap gap-5">
             {socials.map((item, index) => (

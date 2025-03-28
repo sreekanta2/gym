@@ -1,4 +1,4 @@
-import { menus } from "@/config/data";
+import { menus } from "@/config/menus";
 import { cn } from "@/lib/utils";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import { ChevronDown, LogInIcon } from "lucide-react";
@@ -6,8 +6,8 @@ import Link from "next/link";
 
 import { usePathname } from "next/navigation";
 import React from "react";
-import ThemeButton from "../theme-button";
-import { Button } from "../ui/button";
+import ThemeButton from "../../theme-button";
+import { Button } from "../../ui/button";
 
 export default function NavMenu() {
   const pathname = usePathname();

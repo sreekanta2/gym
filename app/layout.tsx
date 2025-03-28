@@ -1,7 +1,14 @@
+import { siteConfig } from "@/config/site";
+
 import Providers from "@/provider/providers";
 
-import { siteConfig } from "@/config/site";
+import AuthProvider from "@/provider/auth.provider";
+import { Inter } from "next/font/google";
+
 import "./assets/scss/globals.scss";
+
+const inter = Inter({ subsets: ["latin"] });
+
 export const metadata = {
   title: {
     default: siteConfig.name,
@@ -9,6 +16,7 @@ export const metadata = {
   },
   description: siteConfig.description,
 };
+
 export default async function RootLayout({
   children,
 }: {
@@ -16,7 +24,9 @@ export default async function RootLayout({
 }) {
   return (
     <html>
-      <Providers>{children}</Providers>
+      <AuthProvider>
+        <Providers>{children}</Providers>
+      </AuthProvider>
     </html>
   );
 }

@@ -3,7 +3,6 @@ import CustomFormField, { FormFieldType } from "@/components/custom-form-field";
 import SubmitButton from "@/components/submit-button";
 import { SiteLogo } from "@/components/svg";
 import { Form } from "@/components/ui/form";
-import { SelectItem } from "@/components/ui/select";
 import { Separator } from "@/components/ui/separator";
 import { LoginSchema } from "@/schemas/auth";
 
@@ -27,7 +26,7 @@ const LogInForm = () => {
     resolver: zodResolver(LoginSchema),
     defaultValues: {
       email: "",
-      password: "123456",
+      password: "",
     },
   });
 
@@ -56,26 +55,13 @@ const LogInForm = () => {
           >
             <div className="relative">
               <CustomFormField
-                fieldType={FormFieldType.SELECT}
+                fieldType={FormFieldType.INPUT}
                 name="email"
                 control={form.control}
                 placeholder="Email"
                 label="Email"
                 type="email"
-              >
-                <SelectItem value="admin@example.com">
-                  admin@example.com(Recommended)
-                </SelectItem>
-                <SelectItem value="doctor@example.com">
-                  doctor@example.com
-                </SelectItem>
-                <SelectItem value="patient@example.com">
-                  patient@example.com
-                </SelectItem>
-                <SelectItem value="pharmacy@example.com">
-                  pharmacy@example.com
-                </SelectItem>
-              </CustomFormField>
+              />
             </div>
             <div className="relative">
               <CustomFormField

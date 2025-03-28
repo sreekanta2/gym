@@ -178,3 +178,8 @@ body {
     z-index: 0 !important;
   }
 }
+
+@import "partials/calendar.scss";
+@import "partials/react-slect";
+@import "partials/map";
+@import "partials/shepherd";

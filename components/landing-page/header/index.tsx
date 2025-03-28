@@ -9,7 +9,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation"; // Add this import
 import { useEffect, useState } from "react";
 
-import { menus } from "@/config/data";
+import { menus } from "@/config/menus";
 import { cn } from "@/lib/utils";
 import NavMenu from "./nav-menu";
 
